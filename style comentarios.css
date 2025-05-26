@@ -1,0 +1,103 @@
+.comentarios-section {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: linear-gradient(120deg, #22314af8 70%, #1a2236f8 100%);
+  border-radius: 2rem;
+  box-shadow:
+    0 16px 48px #2563eb55,
+    inset 0 0 0 12px #1a223633;
+  color: #eaf6ff;
+}
+.comentarios-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 12px #2563eb66;
+}
+.comentarios-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+  padding-right: 0.5rem;
+}
+.comentario-item {
+  background: #2563eb;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px #1a223666;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.4s forwards ease-out;
+}
+.comentario-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #5a7ca8;
+  border-radius: 0.8rem;
+  background: #1a2236;
+  color: #eaf6ff;
+  resize: vertical;
+  margin-bottom: 0.8rem;
+}
+.comentario-input:focus {
+  outline: 2px solid #2563eb;
+}
+.comentario-submit {
+  display: inline-block;
+  background: #60a5fa;
+  color: #1a2236;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.comentario-submit:hover {
+  background: #2563eb;
+  color: #eaf6ff;
+}
+
+.comentario-delete {
+  background: transparent;
+  border: none;
+  color: #f87171;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  margin-left: 1rem;
+}
+
+.comentario-delete:hover {
+  color: #fde68a;
+}
+
+.comentario-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #5a7ca8;
+  border-radius: 0.8rem;
+  background: #1a2236;
+  color: #eaf6ff;
+  resize: vertical;
+  margin-bottom: 0.8rem;
+}
+
+/* Estilo para el nuevo campo de nombre */
+.nombre-usuario-input {
+  resize: none; /* Evitar que se pueda cambiar el tamaño como un textarea */
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
