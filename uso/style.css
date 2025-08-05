@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500;400&display=swap');
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(120deg, #1a2236 70%, #22314a 100%);
+    color: #eaf6ff;
+}
+
+
+
+/* Sección principal */
+.ecp-instrucciones {
+    max-width: 1200px;
+    margin: 2.5rem auto 8rem auto;
+    background: linear-gradient(120deg, #22314af8 80%, #2563eb 100%);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px #2563eb55, 0 0 0 12px #2563eb22 inset;
+    padding: 2rem 1.5rem;
+    position: relative;
+    z-index: 2;
+    padding: 150px;
+}
+
+.ecp-instrucciones h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #60a5fa;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: 'Montserrat', Arial, sans-serif;
+    animation: fadeTextIn 1s cubic-bezier(.4,0,.2,1);
+}
+
+/* Pasos en grid para desktop */
+.ecp-pasos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.ecp-paso {
+    background: linear-gradient(120deg, #181f2a 60%, #22314a 100%);
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px #2563eb33;
+    padding: 1.5rem 1rem 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInUp 0.8s both;
+    min-width: 220px;
+    max-width: 320px;
+}
+
+.ecp-paso:hover {
+    transform: scale(1.07) translateY(-8px);
+    box-shadow: 0 24px 64px #60a5fa99, 0 0 0 18px #2563eb33 inset;
+}
+
+.ecp-numero {
+    background: linear-gradient(120deg, #2563eb 60%, #60a5fa 100%);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 12px #2563eb55;
+    border: 3px solid #60a5fa;
+    font-family: 'Montserrat', Arial, sans-serif;
+    animation: bounceIn 0.7s;
+}
+
+.ecp-img {
+    width: 100%;
+    max-width: 220px;
+    min-width: 180px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 12px 40px #60a5fa77, 0 0 0 12px #2563eb33 inset;
+    background: #181f2a;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    animation: imgPopIn 1s cubic-bezier(.4,0,.2,1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.ecp-paso:hover .ecp-img {
+    transform: scale(1.12) rotate(-2deg);
+    box-shadow: 0 24px 64px #60a5fa99, 0 0 0 18px #2563eb33 inset;
+}
+
+.ecp-paso p {
+    font-size: 1.08rem;
+    color: #eaf6ff;
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    animation: fadeTextIn 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+/* Animación para la sección de animación/video */
+.ecp-animacion {
+    max-width: 700px;
+    margin: 2.5rem auto 2rem auto;
+    background: #22314af8;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px #2563eb44, 0 0 0 8px #2563eb22 inset;
+    padding: 2rem 1rem;
+    text-align: center;
+    animation: fadeTextIn 1s cubic-bezier(.4,0,.2,1);
+}
+
+.ecp-animacion h2 {
+    color: #60a5fa;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.ecp-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ecp-animacion-video {
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 16/9;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px #2563eb55;
+    background: #181f2a;
+    animation: imgPopIn 1s cubic-bezier(.4,0,.2,1);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.ecp-animacion-video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 48px #60a5fa99;
+}
+
+/* Animaciones profesionales */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeTextIn {
+    0% { opacity: 0; transform: translateY(20px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+@keyframes imgPopIn {
+    0% { opacity: 0; transform: scale(0.7);}
+    60% { opacity: 0.7; transform: scale(1.08);}
+    100% { opacity: 1; transform: scale(1);}
+}
+@keyframes bounceIn {
+    0% { transform: scale(0.7);}
+    60% { transform: scale(1.2);}
+    100% { transform: scale(1);}
+}
+
+/* Responsive móvil */
+@media (max-width: 700px) {
+    .ecp-header {
+        font-size: 1.2rem;
+        padding: 0.8rem 0.5rem 0.5rem 0.5rem;
+        border-radius: 0 0 1.2rem 1.2rem;
+        margin-bottom: 0.7rem;
+    }
+    .ecp-instrucciones {
+        padding: 0.7rem 0.2rem;
+        border-radius: 0.7rem;
+        margin: 1.2rem 0.1rem 0.7rem 0.1rem;
+    }
+    .ecp-instrucciones h2 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .ecp-pasos {
+        flex-direction: column;
+        gap: 0.7rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .ecp-paso {
+        max-width: 98vw;
+        min-width: 0;
+        padding: 0.7rem 0.2rem 0.8rem 0.2rem;
+        border-radius: 0.7rem;
+        box-shadow: 0 2px 8px #2563eb22;
+    }
+    .ecp-numero {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+        border-width: 2px;
+        animation: bounceIn 0.7s;
+    }
+    .ecp-img {
+        max-width: 40vw;
+        min-width: 80px;
+        width: 40vw;
+        margin-bottom: 0.5rem;
+        border-radius: 0.6rem;
+        box-shadow: 0 2px 8px #60a5fa33;
+        animation: imgPopIn 0.7s both;
+        object-fit: cover;
+    }
+    .ecp-paso p {
+        font-size: 0.95rem;
+    }
+    .ecp-animacion {
+        padding: 0.7rem 0.2rem;
+        border-radius: 0.7rem;
+        margin: 1.2rem 0.2rem 1rem 0.2rem;
+    }
+    .ecp-animacion h2 {
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+    }
+    .ecp-animacion-video {
+        max-width: 95vw;
+        aspect-ratio: 16/9;
+        border-radius: 0.7rem;
+        box-shadow: 0 2px 8px #2563eb22;
+        animation: imgPopIn 0.7s both;
+    }
+}
