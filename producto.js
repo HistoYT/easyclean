@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const product = {
               id: 1,
               nameProduct: "Easy Clean Pro",
-              price: 12990,
+              price: 35000,
               quantity: cantidad,
           };
           onAddProduct(product);
